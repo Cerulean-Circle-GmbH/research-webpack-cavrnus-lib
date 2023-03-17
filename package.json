@@ -1,0 +1,24 @@
+{
+  "name": "webpack-cavrnus-lib",
+  "version": "1.0.0",
+  "description": "research in creating a cavrnus dist",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm i && npx webpack",
+    "build-fast": "npx webpack",
+    "build-secure": "npm clean-install && npx webpack",
+    "addCompletion": "npm completion > ~/.local/share/bash-completion/completions/_npm && echo start a new bash",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@cavrnus/lib": "^0.3.25"
+  },
+  "devDependencies": {
+    "browserify": "^17.0.0",
+    "npx": "^10.2.2",
+    "webpack": "^5.76.2",
+    "webpack-cli": "^5.0.1"
+  }
+}
