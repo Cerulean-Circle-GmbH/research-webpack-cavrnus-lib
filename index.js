@@ -1,3 +1,3 @@
-import cavrnus_lib from "@cavrnus/lib";
+import * as cavrnus_lib from "./dist/cavrnus-lib-browserified.js";
 
-console.log("Hello world");
+console.log("Hello world", cavrnus_lib);

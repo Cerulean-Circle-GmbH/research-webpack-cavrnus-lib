@@ -1,6 +1,7 @@
 # Getting started
 
 ```
+npm i
 npm run build-save
 ```
 

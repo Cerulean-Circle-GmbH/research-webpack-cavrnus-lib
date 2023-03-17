@@ -4,9 +4,10 @@
   "description": "research in creating a cavrnus dist",
   "main": "index.js",
   "scripts": {
-    "build": "npm i && npx webpack",
-    "build-fast": "npx webpack",
-    "build-secure": "npm clean-install && npx webpack",
+    "build": "npm i && npm run build-fast",
+    "build-fast": "npx webpack && npm run browerify",
+    "build-secure": "npm clean-install && npm run build-fast",
+    "browerify": "browserify dist/cavrnus-lib.js -o dist/cavrnus-lib-browserified.js",
     "addCompletion": "npm completion > ~/.local/share/bash-completion/completions/_npm && echo start a new bash",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
