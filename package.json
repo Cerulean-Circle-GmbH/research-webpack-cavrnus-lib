@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "build": "npm i && npm run build-fast",
-    "build-fast": "npx webpack && npm run browerify",
+    "build-fast": "npm run browserify-lib",
     "build-secure": "npm clean-install && npm run build-fast",
-    "browerify": "browserify dist/cavrnus-lib.js -o dist/cavrnus-lib-browserified.js",
+    "browserify-lib": "browserify node_modules/@cavrnus/lib/index.js -o dist/cavrnus-lib.js --standalone cavrnus-lib --debug",
     "addCompletion": "npm completion > ~/.local/share/bash-completion/completions/_npm && echo start a new bash",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -18,8 +18,6 @@
   },
   "devDependencies": {
     "browserify": "^17.0.0",
-    "npx": "^10.2.2",
-    "webpack": "^5.76.2",
-    "webpack-cli": "^5.0.1"
+    "npx": "^10.2.2"
   }
 }
